@@ -3,30 +3,26 @@ import 'firebase/auth';
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyBVv39az9eBvJ9Ub7vaPtC_m6-kaGoaWLU",
-  authDomain: "hello-1ef06.firebaseapp.com",
-  databaseURL: "https://hello-1ef06.firebaseio.com",
-  projectId: "hello-1ef06",
-  storageBucket: "hello-1ef06.appspot.com",
-  messagingSenderId: "734788172385",
-  appId: "1:734788172385:web:8362bd96b913a551db4820",
-  measurementId: "G-B1MVMRMXRQ"
+  apiKey: "AIzaSyAV5cvJBnmY5-HjM1M9F8bDuBtcUUm19pA",
+  authDomain: "hell-3ffbd.firebaseapp.com",
+  databaseURL: "https://hell-3ffbd.firebaseio.com",
+  projectId: "hell-3ffbd",
+  storageBucket: "hell-3ffbd.appspot.com",
+  messagingSenderId: "204269549978",
+  appId: "1:204269549978:web:b611af527130de82fc2223",
+  measurementId: "G-C9YT2XLPYD"
 
 
 });
 
 const db = firebaseApp.firestore();
 
-export default db;
-  
-  
-  // .collection('favs')
 
-  // export function updateDB(array, uid){
+  export function updateDB(array, displayName){
 
-  //   return db.doc(uid).set({array})
+    return db.collection('favs').doc(displayName).set({array})
     
-  // }
+  }
 
   export function LoginWithGoogle(){
       let provider = new firebase.auth.GoogleAuthProvider()
